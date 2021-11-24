@@ -6,21 +6,32 @@ import (
 	"log"
 	"net"
 	"time"
+	"flag"
+	"os"
 )
 
 func handleConn(c net.Conn) {
 	defer c.Close()
-	for {
-		_, err := io.WriteString(c, time.Now().Format("15:04:05\n"))
+	/*_, err := io.WriteString(c, os.Getenv("TZ")+": "+time.Now().Format("15:04:05\n"))
+	if err != nil {
+		return // e.g., client disconnected
+	}
+	time.Sleep(1 * time.Second)*/
+
+	for{
+		_, err := io.WriteString(c, os.Getenv("TZ")+": "+time.Now().Format("15:04:05\n"))
 		if err != nil {
 			return // e.g., client disconnected
 		}
 		time.Sleep(1 * time.Second)
 	}
+	
 }
 
 func main() {
-	listener, err := net.Listen("tcp", "localhost:9090")
+	port := flag.String("port", "9090", "number of tcp port")
+	flag.Parse()
+	listener, err := net.Listen("tcp", "localhost:"+ *port)
 	if err != nil {
 		log.Fatal(err)
 	}
