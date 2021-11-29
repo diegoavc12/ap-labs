@@ -17,4 +17,4 @@ as the behavior of stop lights.
 
 Flow of the Program
 ----------------------
-![City Traffic] flowchart-city-traffic.png
+![City Traffic] (flowchart-city-traffic.png)
