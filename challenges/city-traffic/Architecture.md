@@ -15,5 +15,6 @@ concurrent programming, we concluded thatmany of the tools that the language pro
 channels would be fundamental to manage not only the movement ofthe cars, but also the communication between them as well 
 as the behavior of stop lights.
 
-Programming Language
+Flow of the Program
 ----------------------
+![City Traffic] flowchart-city-traffic.png
