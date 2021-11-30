@@ -1,3 +1,4 @@
+
 Architecture- Traffic Simulator
 ====================================
 
@@ -17,4 +18,20 @@ as the behavior of stop lights.
 
 Flow of the Program
 ----------------------
-![City Traffic] (flowchart-city-traffic.png)
+![City Traffic](flowchart-city-traffic.png)
+
+Challenges and Limitations
+----------------------
+Our biggest challenge was handling the behavior of the cars. Once we had a starting and end point, we had to determine how are 
+they going to find the path to get there. We chose to use a BFS algorithm for this. We were not intending to find an optimal
+route because we wanted to explore the possible scenarios that we could find by encountering stop lights and other cars. 
+
+On the other hand, we were limited by not having an easy form of creating a GUI using Go. Other languages and even IDEs have
+straight forward ways of displaying shapes and images, but this was not our case. In the end, we managed to display everything 
+using normal strings. 
+
+
+Conclusion
+----------------------
+Finally, we want to mention that with this project we learned about complexity of concurrent programming and, at the same, we 
+understood how useful in can be since it allows as to create faster programs and creates a world of possibilities for problem solving
